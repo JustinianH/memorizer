@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+    
+
+$(document).ready(function() {
+
+    $.get("memorizer.php", function(data){
+
+    	var poem = (data);
+
+    	$("#poem-div").append(poem);
+
+    });
+
+})
+
+</script>
+
+
+
+
+<div id="poem-div">
+
+
+</div>
+
+
+<button type="button" id="firstWordButton" onclick=""> First Word </button>
+
+
+<script type="text/javascript">
+	
+	$("#firstWordButton").click(function() {
+
+    $.get("memorizer.php", function(data){
+
+    	$("#poem-div").append(poem);
+
+    });
+
+});
+</script>
+
+
+
+</body>
+
+</html>
